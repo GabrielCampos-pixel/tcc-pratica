@@ -8,7 +8,7 @@ public class Pratica04 {
         System.out.println("Digite uma palavra composta por 'a' ou 'b'");//Solicita ao usuario que digite uma palavra
         String palavra = teclado.next();
         Estado estadoAtual = Estado.Q0;//Onde o estado do automato se inicia
-        for (char simbolo : palavra.toCharArray()) {
+        for (char simbolo : palavra.toCharArray()) {//Declara a variavel simbolo usada para armazenar cada caracter individualmente,converte a array palavra em um array de caracteres 
             switch (estadoAtual) {
                 case Q0:
                 if (simbolo == 'a') {
