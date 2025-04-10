@@ -8,26 +8,26 @@ public class Pratica03 {
         System.out.println("Digite uma palavra composta por 'a' ou 'b'");//Solicita ao usuario que digite uma palavra
         String palavra = teclado.next();
         Estado estadoAtual = Estado.Q0;//Onde o estado do automato se inicia
-        for (char simbolo : palavra.toCharArray()) {//Declara a variavel simbolo usada para armazenar cada caracter individualmente,converte a array palavra em um array de caracteres 
+        for (char caracter : palavra.toCharArray()) {//Declara a variavel caracter usada para armazenar cada caracter individualmente,converte a array palavra em um array de caracteres 
             switch (estadoAtual) {
                 case Q0:
-                if (simbolo == 'a') {
+                if (caracter == 'a') {
                     estadoAtual = Estado.Q1;//Se estiver no estado Q0 e receber a,vai para o estado Q1 
-                } else if (simbolo == 'b') {
+                } else if (caracter == 'b') {
                     estadoAtual = Estado.Q2;//Se estiver no estado Q0 e receber a,vai para o estado Q2
                 }
                 break;
                 case Q1:
-                if (simbolo == 'a') {
+                if (caracter == 'a') {
                     estadoAtual = Estado.QF;//Se estiver no estado Q1 e receber a,vai para o estado QF
-                } else if (simbolo == 'b') {
+                } else if (caracter == 'b') {
                     estadoAtual = Estado.Q2;//Se estiver no estado Q1 e receber a,vai para o estado Q2
                 }
                 break;
                 case Q2:
-                if (simbolo == 'a') {
+                if (caracter == 'a') {
                     estadoAtual = Estado.Q1;//Se estiver no estado Q2 e receber a,vai para o estado Q1
-                } else if (simbolo == 'b') {
+                } else if (caracter == 'b') {
                     estadoAtual = Estado.QF;//Se estiver no estado Q2 e receber a,vai para o estado QF
                 }
                 break;
